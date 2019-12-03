@@ -1,3 +1,3 @@
-soap\ws\juros\WebServiceJuros.class
-ws\juros\calc\JuroSimples.class
-ws\juros\calc\JuroComposto.class
+gus\ws\soap\juros\calc\JuroComposto.class
+gus\ws\soap\juros\service\WSJuros.class
+gus\ws\soap\juros\calc\JuroSimples.class

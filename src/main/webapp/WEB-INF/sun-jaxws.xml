@@ -2,7 +2,7 @@
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" 
            version="2.0">
   <endpoint name="WSJuros" 
-            implementation="gus.ws.juros.service.WSJuros" 
+            implementation="gus.ws.soap.juros.service.WSJuros" 
             url-pattern="/juros" >
   </endpoint>
 </endpoints>

@@ -1,10 +1,88 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebService Juros</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #link {
+            text-decoration: underline;
+            color: crimson;
+            width: 40vh;
+            border-style: none;
+        }
+
+        #link:hover {
+            width: 40vh;
+            text-decoration: underline;
+            color: blueviolet;
+        }
+
+        #btnCopiar {
+            width: 50vh;
+            height: 5vh;
+            color: azure;
+            background-color: #6EB5FF;
+            border-style: solid;
+            border-radius: 2vh;
+        }
+
+        #btnCopiar:hover {
+            color: azure;
+            background-color: #85E3FF;
+        }
+    </style>
+
+    <script>
+        function copiarLink() {
+            var copyText = document.getElementById("link");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+            alert("URL Copiada");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="info">
+        <h1>WebService SOAP de Juros</h1>
+    </div>
+    <br>
+    <div class="info">
+        <p><a href="/juros">endpoint /juros</a></p>
+    </div>
+    <div class="info">
+        <p>WSDL -> <input id="link" value="http://ws-soap-juros.gustavo-lara.codes/juros?wsdl">
+        </p>
+    </div>
+    <div class="info">
+        <button id="btnCopiar" onclick="copiarLink();">Copiar</button>
+    </div>
+    <br>
+    <div class="info">
+        <h3>Funções</h3>
+    </div>
+    <div class="info">
+        <ol>
+            <li>Juros Simples</li>
+            <li>Montante do Juros Simples</li>
+            <li>Juros Composto</li>
+            <li>Montante do Juros Composto</li>
+        </ol>
+    </div>
+</body>
+
 </html>
